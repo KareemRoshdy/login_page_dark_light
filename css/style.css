@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root{
+    --bg-color: linear-gradient(rgb(196, 120, 22),rgb(255, 209, 109));
+    --color: rgb(196, 120, 22);
+}
+
+body.active{
+    --bg-color: linear-gradient(rgb(68, 4, 4),rgba(160, 11, 11, 0.795));;
+    --color: rgb(102, 2, 2);
+}
+
+/* body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
+} */
+
+.container{
+    width: 100%;
+    /* margin: auto; */
+    height: 100vh;
+    background-image: var(--bg-color);
+    /* border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%; */
+    /* box-shadow: 0 2px 20px rgb(196, 121, 22); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 2rem;
+    position: relative;
+    
+
+}
+.sw{
+    display: inline-block;
+    width: 65px;
+    height: 30px;
+    background: #fff;
+    border-radius: 30px;
+    position: absolute;
+    top: 1rem;
+    right: 8rem;
+    cursor: pointer;
+    box-shadow: 0 2px 30px rgba(255, 255, 255, 0.589);
+}
+.bol{
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background: var(--color);
+    border-radius: 50%;
+    border: .1rem solid #fff;
+    transition: .3s;
+}
+.bol.active{
+    transform: translateX(35px);
+}
+.content{
+    width: 350px;
+    /* background: rgb(102, 2, 2); */
+    background: var(--bg-color);
+    height: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: .2rem solid var(--color);
+    box-shadow: 0 2px 20px rgb(68, 4, 4);
+}
+.top{
+    width: 100%;
+    height: 35%;
+    margin-bottom: .7rem;
+    /* background-image: linear-gradient(rgb(68, 4, 4),rgba(160, 11, 11, 0.795)); */
+    background-image: var(--bg-color);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    text-align: center;
+    color: #fff;
+}
+.login{
+    width: 130px;
+    height: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-image: var(--bg-color);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    margin-bottom: 1rem;
+}
+.top h3{
+    margin-bottom: .3rem;
+    font-size: 1.4rem;
+}
+.top p{
+    font-size: .9rem;
+}
+form{
+    width: 100%;
+    height: 70%;
+    border-radius: 1rem;
+    background:rgb(252, 249, 249);
+    padding: 1rem;
+}
+label{
+    color: rgb(53, 53, 53);
+    margin: .2rem 0;
+    display: inline-block;
+}
+input{
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: .2rem;
+    outline: none;
+    border: .1rem solid rgb(196, 196, 196);
+    padding: 0 .8rem;
+    font-size: .9rem;
+}
+
+.inputBox{
+    margin: .6rem 0;
+}
+.inputBox:nth-child(2){
+    margin-bottom: .5rem;
+}
+.forgot{
+    text-align: right;
+    margin-bottom: 1rem;
+}
+.forgot a{
+    color: var(--color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.btn{
+    background: var(--color);
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 1.6rem;
+    transition: .3s;
+}
+.btn:hover{
+    background: rgb(68, 4, 4);
+}
+
+.ather{
+    text-align: center;
+}
+
+.ather span{
+    font-weight: bold;
+    display: block;
+    margin: .9rem 0;
+    position: relative;
+    color: #000;
+}
+
+.ather span::after,
+.ather span::before{
+    content: '';
+    position: absolute;
+    width: 95px;
+    height: 1.5px;
+    background: gray;
+    top: 10px;
+}
+.ather span::after{
+    left: 0;
+}
+.ather span::before{
+    right: 0;
+}
+.icons i{
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: var(--color);
+    color: #fff;
+    border-radius: 50%;
+    margin: 0 .5rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: .3s;
+}
+.icons i:hover{
+    background: rgb(68, 4, 4);
+}
+.ather p{
+    color: rgb(49, 49, 49);
+    font-weight: bold;
+}
+
+.ather p a{
+    color: var(--color);
+}
+
+.fa-sun{
+    position: absolute;
+    top: .5rem;
+    left: .4rem;
+    z-index: 100;
+}
+
+.fa-moon{
+    position: absolute;
+    top: .5rem;
+    right: .4rem;
+    z-index: 100;
+}
